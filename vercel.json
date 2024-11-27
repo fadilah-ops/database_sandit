@@ -1,16 +1,16 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/next"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",  // Ganti dengan nama file entry point Anda
+      "use": "@vercel/node"  // Gunakan builder untuk aplikasi Node.js
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"  // Semua rute akan diarahkan ke index.js
+    }
+  ]
+}
+
