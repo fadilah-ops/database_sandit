@@ -6,8 +6,8 @@ dotenv.config()
 // Konfigurasi koneksi database
 const db = new Sequelize(process.env.DB_NAME,process.env.DB_HOST,process.env.PASSWORD, {
   host: process.env.HOST,
-  dialect: process.env.DIALECT, // Dialek database
-  dialectModule: mysql2, // Dialek MySQL menggunakan mysql2
+  dialect: process.env.DIALECT, 
+  dialectModule: mysql2, 
 });
 
-export default db; // Gunakan `export` untuk ES Modules
+export default db;
